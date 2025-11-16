@@ -1,0 +1,1000 @@
+{
+  "type": "bundle",
+  "id": "bundle--5a779105-30b1-47ee-aeb1-e6005e74959b",
+  "spec_version": "2.1",
+  "created": "2025-11-16T11:52:03.654Z",
+  "modified": "2025-11-16T11:52:03.654Z",
+  "objects": [
+    {
+      "type": "extension-definition",
+      "id": "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "name": "Attack Flow",
+      "description": "Extends STIX 2.1 with features to create Attack Flows.",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "schema": "https://center-for-threat-informed-defense.github.io/attack-flow/stix/attack-flow-schema-2.0.0.json",
+      "version": "2.0.0",
+      "extension_types": [
+        "new-sdo"
+      ],
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "description": "Documentation for Attack Flow",
+          "url": "https://center-for-threat-informed-defense.github.io/attack-flow"
+        },
+        {
+          "source_name": "GitHub",
+          "description": "Source code repository for Attack Flow",
+          "url": "https://github.com/center-for-threat-informed-defense/attack-flow"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "spec_version": "2.1",
+      "created": "2022-08-02T19:34:35.143Z",
+      "modified": "2022-08-02T19:34:35.143Z",
+      "created_by_ref": "identity--fb9c968a-745b-4ade-9b25-c324172197f4",
+      "name": "MITRE Center for Threat-Informed Defense",
+      "identity_class": "organization"
+    },
+    {
+      "type": "attack-flow",
+      "id": "attack-flow--a285cb0a-b530-4964-b368-4bb3149595ce",
+      "spec_version": "2.1",
+      "created": "2025-10-28T09:34:47.366Z",
+      "modified": "2025-11-16T11:52:03.654Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "created_by_ref": "identity--b4492e66-8a92-42d1-a09e-049da485f4a8",
+      "start_refs": [
+        "attack-condition--8b694b49-d39f-46f4-a93a-4d7003e97595"
+      ],
+      "name": "Untitled Document",
+      "scope": "incident"
+    },
+    {
+      "type": "identity",
+      "id": "identity--b4492e66-8a92-42d1-a09e-049da485f4a8",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.654Z",
+      "modified": "2025-11-16T11:52:03.654Z",
+      "name": "Julia Vister"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8f833832-b3d3-47f9-8296-e5f0e2913162",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.654Z",
+      "modified": "2025-11-16T11:52:03.654Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Malware",
+      "tactic_id": "TA0042",
+      "tactic_ref": "x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400",
+      "technique_id": "T1587.001",
+      "technique_ref": "attack-pattern--212306d8-efa4-44c9-8c2d-ed3d2e224aa0",
+      "description": "Develop the TRITON framework and controller payloads tailored for Triconex controllers.",
+      "effect_refs": [
+        "attack-action--aaf5ccf0-cd29-4cfe-a6d5-f93682cfb32f"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--8b694b49-d39f-46f4-a93a-4d7003e97595",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.654Z",
+      "modified": "2025-11-16T11:52:03.654Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Knowledge of target controller architecture"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--aaf5ccf0-cd29-4cfe-a6d5-f93682cfb32f",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.654Z",
+      "modified": "2025-11-16T11:52:03.654Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Tool",
+      "tactic_id": "TA0042",
+      "tactic_ref": "x-mitre-tactic--d679bca2-e57d-4935-8650-8031c87a4400",
+      "technique_id": "T1588.002",
+      "technique_ref": "attack-pattern--a2fdce72-04b2-409a-ac10-cc1695f4fce0",
+      "description": "Acquire or assemble supporting tools",
+      "effect_refs": [
+        "attack-action--211ae94b-fd27-4794-8ea2-4d353d37180f"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--4f322107-d325-40a3-9f12-f633f1633b95",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "Mimikatz"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--211ae94b-fd27-4794-8ea2-4d353d37180f",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Indicator Removal from Tools",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1027.005",
+      "technique_ref": "attack-pattern--b0533c6e-8fea-4788-874f-b799cacc4b92",
+      "description": "Obfuscate and modify files in an attempt to decrease anti-virus detection rates.",
+      "effect_refs": [
+        "attack-action--14a0c7ba-2ffd-4b41-ba9b-b171c90a3a55"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--14a0c7ba-2ffd-4b41-ba9b-b171c90a3a55",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Match Legitimate Resource Name or Location",
+      "tactic_id": "TA0005",
+      "tactic_ref": "x-mitre-tactic--78b23412-0651-46d7-a540-170a1ce8bd5a",
+      "technique_id": "T1036.005",
+      "technique_ref": "attack-pattern--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2",
+      "description": "Rename TRITON components to resemble legitimate TriStation/Triconex utilities so they appear normal on the workstation.",
+      "effect_refs": [
+        "attack-action--8b273c05-90c8-43f6-986f-fc005210d9d8"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--4aa97fa0-3cd3-43ec-9a3d-4a45aa05de4b",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "trilog.exe"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--8b273c05-90c8-43f6-986f-fc005210d9d8",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Encrypted Channel",
+      "tactic_id": "TA0011",
+      "tactic_ref": "x-mitre-tactic--f72804c5-f15a-449e-a5da-2eecd181f813",
+      "technique_id": "T1573",
+      "technique_ref": "attack-pattern--b8902400-e6c5-4ba2-95aa-2d35b442b118",
+      "description": "Prepare encrypted C2 channels to hide communications.",
+      "effect_refs": [
+        "attack-condition--675db32f-c7e1-4f6f-8f30-d465c5c45a98"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--675db32f-c7e1-4f6f-8f30-d465c5c45a98",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Network access to target ranges"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--521a3a18-09e3-413f-b972-84ebb06673bb",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Active Scanning",
+      "tactic_id": "TA0043",
+      "tactic_ref": "x-mitre-tactic--daa4cbb1-b4f4-4723-a824-7f1efd6e0592",
+      "technique_id": "T1595",
+      "technique_ref": "attack-pattern--67073dde-d720-45ae-83da-b12d5e73ca3b",
+      "description": "From external access, attacker runs discovery scans to enumerate reachable hosts, services and identify SIS network segments.",
+      "effect_refs": [
+        "attack-action--c0a0ee32-66f2-430d-82b5-f47a8256d887"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c0a0ee32-66f2-430d-82b5-f47a8256d887",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Adversary-in-the-Middle",
+      "tactic_id": "TA0100",
+      "tactic_ref": "x-mitre-tactic--b2a67b1e-913c-46f6-b219-048a90560bb9",
+      "technique_id": "T0830",
+      "technique_ref": "attack-pattern--9a505987-ab05-4f46-a9a6-6441442eec3b",
+      "description": "Change phone numbers tied to certain accounts in a contact list, then change phone numbers to redirect network traffic to websites controlled by attackers. Allows to capture and use login codes sent to devices via text message.",
+      "effect_refs": [
+        "attack-condition--624fb6e9-3d6c-4d3b-878b-cef6339cd24d"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--624fb6e9-3d6c-4d3b-878b-cef6339cd24d",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Successful phishing"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--95f7480e-7ace-41a1-9f27-44c654f28161",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Web Portal Capture",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1056.003",
+      "technique_ref": "attack-pattern--69e5226d-05dc-4f15-95d7-44f5ed78d06e",
+      "description": "Capture credentials as they are being changed to obtain valid accounts.",
+      "effect_refs": [
+        "attack-condition--cfe69d97-bbdb-4a39-b520-7d9d30ed9e8b"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--cfe69d97-bbdb-4a39-b520-7d9d30ed9e8b",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Privilege enabling reading memory"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--ae42d1c4-9fab-4039-80ea-274041064585",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "LSASS Memory",
+      "tactic_id": "TA0006",
+      "tactic_ref": "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263",
+      "technique_id": "T1003.001",
+      "technique_ref": "attack-pattern--65f2d882-3f41-4d48-8a06-29af77ec9f90",
+      "description": "Attacker dumps LSASS memory to extract additional credentials and tokens.",
+      "effect_refs": [
+        "attack-action--912f9780-091d-4569-a1c5-fc759506e97c"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--912f9780-091d-4569-a1c5-fc759506e97c",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Scheduled Task",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1053.005",
+      "technique_ref": "attack-pattern--005a06c6-14bf-4118-afa0-ebcd8aebb0c9",
+      "description": "Create scheduled tasks defined in XML files on compromised hosts to allow repeated staging attempts.",
+      "effect_refs": [
+        "attack-action--c3271f67-adf6-446a-97f7-327cfc0f516d"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--32f16f64-3521-482b-8d57-e105e586a81a",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "XML files"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--c3271f67-adf6-446a-97f7-327cfc0f516d",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Valid Accounts",
+      "tactic_id": "TA0110",
+      "tactic_ref": "x-mitre-tactic--78f1d2ae-a579-44c4-8fc5-3e1775c73fac",
+      "technique_id": "T0859",
+      "technique_ref": "attack-pattern--cd2c76a4-5e23-4ca5-9c40-d5e0604f7101",
+      "description": "Use harvested and valid credentials to move laterally moving through RDP jump boxes.",
+      "effect_refs": [
+        "attack-action--49e614ee-0b21-4e4e-b563-30bbd9c12385",
+        "attack-action--c3271f67-adf6-446a-97f7-327cfc0f516d"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--49e614ee-0b21-4e4e-b563-30bbd9c12385",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Remote Services",
+      "tactic_id": "TA0109",
+      "tactic_ref": "x-mitre-tactic--51c25a9e-8615-40c0-8afd-1da578847924",
+      "technique_id": "T0886",
+      "technique_ref": "attack-pattern--e1f9cdd2-9511-4fca-90d7-f3e92cfdd0bf",
+      "description": "Utilize remote desktop protocol jump boxes, poorly configured OT firewalls and malware backdoors to move from IT into the OT environment.",
+      "effect_refs": [
+        "attack-action--54e85c61-0fb6-4960-b5b6-c7f0399b9d0c"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--54e85c61-0fb6-4960-b5b6-c7f0399b9d0c",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Scripting",
+      "tactic_id": "TA0104",
+      "tactic_ref": "x-mitre-tactic--93bf9a8e-b14c-4587-b6d5-9efc7c12eb45",
+      "technique_id": "T0853",
+      "technique_ref": "attack-pattern--2dc2b567-8821-49f9-9045-8740f3d0b958",
+      "description": "Execute specific scripts and commands on engineering workstations to interact with controllers or perform uploads.",
+      "effect_refs": [
+        "attack-condition--89818213-456d-4247-8c2c-b703f83b601f"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--cdbdbe61-cd00-4bd8-8be2-6818cf9111ec",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "WMIimplant",
+      "description": "Publicly available PowerShell-based tool"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--a76006c4-4c2b-4c4e-b010-ee97b24e6307",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "PowerShell",
+      "tactic_id": "TA0002",
+      "tactic_ref": "x-mitre-tactic--4ca45d45-df4d-4613-8980-bac22d278fa5",
+      "technique_id": "T1059.001",
+      "technique_ref": "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+      "description": "Invoke PowerShellbased tools on EWS to stage payloads, open encrypted channels and run local logic.",
+      "effect_refs": [
+        "attack-action--b3bbe635-469f-47e8-974d-e4b5c9a1ef99"
+      ],
+      "asset_refs": [
+        "attack-asset--bbc60ddd-e846-4013-af74-6ba081a483e2"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--89818213-456d-4247-8c2c-b703f83b601f",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "A present PowerShell not blocked by whitelisting."
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b3bbe635-469f-47e8-974d-e4b5c9a1ef99",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Command-Line Interface",
+      "tactic_id": "TA0104",
+      "tactic_ref": "x-mitre-tactic--93bf9a8e-b14c-4587-b6d5-9efc7c12eb45",
+      "technique_id": "T0807",
+      "technique_ref": "attack-pattern--24a9253e-8948-4c98-b751-8e2aee53127c",
+      "description": "Use command-line options of TriStation-like tools. One option is a single IP address of the target Triconex device.",
+      "effect_refs": [
+        "attack-action--b494d091-6153-4e0d-9623-6d3b3fc20f6a"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--b494d091-6153-4e0d-9623-6d3b3fc20f6a",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Lateral Tool Transfer",
+      "tactic_id": "TA0109",
+      "tactic_ref": "x-mitre-tactic--51c25a9e-8615-40c0-8afd-1da578847924",
+      "technique_id": "T0867",
+      "technique_ref": "attack-pattern--ead7bd34-186e-4c79-9a4d-b65bcce6ed9d",
+      "description": "Attempt to transfer TRITON components from one system to multiple victim machines and to execute the WMImplant tool.",
+      "effect_refs": [
+        "attack-action--b494d091-6153-4e0d-9623-6d3b3fc20f6a",
+        "attack-condition--e52b0765-7182-4c63-8201-580f8b556f1b",
+        "attack-condition--fb213efb-57b5-448b-a6da-7063ea8be236"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--9578c9a3-d55b-43ca-8027-b6f1ed30d5ca",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "trilog.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--75533ed4-40c6-4ac9-8aac-9ff120ce2745",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "library.zip"
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--e52b0765-7182-4c63-8201-580f8b556f1b",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Triconex controller in PROGRAM mode (writable)"
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--17e556e1-9785-46b4-917b-69985c03273d",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "AND",
+      "effect_refs": [
+        "attack-action--76318f25-45ca-4b4d-b61b-2ce8699bbe7a"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--fb213efb-57b5-448b-a6da-7063ea8be236",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "TriStation session established"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--76318f25-45ca-4b4d-b61b-2ce8699bbe7a",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Program Download",
+      "tactic_id": "TA0109",
+      "tactic_ref": "x-mitre-tactic--51c25a9e-8615-40c0-8afd-1da578847924",
+      "technique_id": "T0843",
+      "technique_ref": "attack-pattern--be69c571-d746-4b1f-bdd0-c0c9817e9068",
+      "description": "Download multiple rounds of control logic to Safety Instrumented System (SIS) controllers through a program append operation.",
+      "effect_refs": [
+        "attack-condition--0dd9fc4d-8da0-4c4e-a4cb-27ee5745e8ff"
+      ]
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--57bc03f7-609b-44af-a33d-90b578d9d20d",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Indicator Removal on Host",
+      "tactic_id": "TA0103",
+      "tactic_ref": "x-mitre-tactic--ddf70682-f3ce-479c-a9a4-7eadf9bfead7",
+      "technique_id": "T0872",
+      "technique_ref": "attack-pattern--53a26eee-1080-4d17-9762-2027d5a1b805",
+      "description": "Programmatically return the controller to a normal running state if the malware fails and if controller does not recover during a time frame, overwrite the malicious program with invalid data.",
+      "effect_refs": [
+        "attack-condition--2b26deb8-b8d1-4388-8aed-f8e847c96302"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--0dd9fc4d-8da0-4c4e-a4cb-27ee5745e8ff",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Write capability to controller and system"
+    },
+    {
+      "type": "course-of-action",
+      "id": "course-of-action--1b59c2b8-bddc-4db1-b87c-36d17d4b3b1b",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "Anti-forensics"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--0296ef72-8754-4771-9e5c-76111882c58b",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Unauthorized Command Message",
+      "tactic_id": "TA0106",
+      "tactic_ref": "x-mitre-tactic--ff048b6c-b872-4218-b68c-3735ebd1f024",
+      "technique_id": "T0855",
+      "technique_ref": "attack-pattern--40b300ba-f553-48bf-862e-9471b220d455",
+      "description": "Leverage Triton to send unauthorized command messages to the Triconex safety controllers. Commands such as halt, run trip or supress.",
+      "effect_refs": [
+        "attack-condition--fc43dbf5-c95a-4a37-a231-e75c2623432b",
+        "attack-condition--9b655220-0fe1-4dcd-acf9-e716b0833edc"
+      ],
+      "asset_refs": [
+        "attack-asset--d93ee85d-21fd-45ac-be8e-5be168cb19fa"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--2b26deb8-b8d1-4388-8aed-f8e847c96302",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Upload succeeded"
+    },
+    {
+      "type": "attack-action",
+      "id": "attack-action--7654adc4-d5dc-4da9-b04f-234a5c4271dd",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Loss of Productivity and Revenue",
+      "tactic_id": "TA0105",
+      "tactic_ref": "x-mitre-tactic--77542f83-70d0-40c2-8a9d-ad2eb8b00279",
+      "technique_id": "T0828",
+      "technique_ref": "attack-pattern--63b6942d-8359-4506-bfb3-cf87aa8120ee",
+      "description": "Plant shutdown resulting in a pause of plant operations for more than a week. Impacting industrial processes and halting productivity."
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--fc43dbf5-c95a-4a37-a231-e75c2623432b",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Commands executed"
+    },
+    {
+      "type": "attack-operator",
+      "id": "attack-operator--e04d6252-0a81-448f-a355-a72484c219d3",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "operator": "OR",
+      "effect_refs": [
+        "attack-action--7654adc4-d5dc-4da9-b04f-234a5c4271dd"
+      ]
+    },
+    {
+      "type": "attack-condition",
+      "id": "attack-condition--9b655220-0fe1-4dcd-acf9-e716b0833edc",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "description": "Testing caused fail-safe trip"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--d93ee85d-21fd-45ac-be8e-5be168cb19fa",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Triconex safety controllers"
+    },
+    {
+      "type": "attack-asset",
+      "id": "attack-asset--bbc60ddd-e846-4013-af74-6ba081a483e2",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "extensions": {
+        "extension-definition--fb9c968a-745b-4ade-9b25-c324172197f4": {
+          "extension_type": "new-sdo"
+        }
+      },
+      "name": "Windows host"
+    },
+    {
+      "type": "location",
+      "id": "location--0c12a0d4-d38a-492b-929f-fbc75c762639",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "CNIIHM",
+      "description": "Central Research Institute of Chemistry and Mechanics",
+      "region": "Europe",
+      "country": "Russia",
+      "city": "Moscow",
+      "street_address": "Nagatinskaya Street"
+    },
+    {
+      "type": "tool",
+      "id": "tool--49a3f463-5fab-4df4-bb1f-4461a3649798",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "name": "Mimikatz"
+    },
+    {
+      "type": "note",
+      "id": "note--a239e53f-c694-4376-abf0-6a99aadf3832",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.655Z",
+      "modified": "2025-11-16T11:52:03.655Z",
+      "abstract": "Network traffic",
+      "content": "SRC Port: 1502\nProtocol: UDP",
+      "object_refs": [
+        "attack-action--76318f25-45ca-4b4d-b61b-2ce8699bbe7a"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c431d22-1bdc-4265-9b55-30d5e1677b0e",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--8b694b49-d39f-46f4-a93a-4d7003e97595",
+      "target_ref": "attack-action--8f833832-b3d3-47f9-8296-e5f0e2913162"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e0ce2d0-2bad-4ee9-9a68-4ee489503e93",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--aaf5ccf0-cd29-4cfe-a6d5-f93682cfb32f",
+      "target_ref": "tool--4f322107-d325-40a3-9f12-f633f1633b95"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27875b45-1d60-40fc-8403-46c818d61708",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--14a0c7ba-2ffd-4b41-ba9b-b171c90a3a55",
+      "target_ref": "file--4aa97fa0-3cd3-43ec-9a3d-4a45aa05de4b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9f603605-451c-436c-ac9e-d0dde150b1fa",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--675db32f-c7e1-4f6f-8f30-d465c5c45a98",
+      "target_ref": "attack-action--521a3a18-09e3-413f-b972-84ebb06673bb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b2853271-09dd-489e-babd-579a1caa0d3d",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--624fb6e9-3d6c-4d3b-878b-cef6339cd24d",
+      "target_ref": "attack-action--95f7480e-7ace-41a1-9f27-44c654f28161"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d05d6a37-7809-4d40-bf5f-442ef3eb4f92",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--cfe69d97-bbdb-4a39-b520-7d9d30ed9e8b",
+      "target_ref": "attack-action--ae42d1c4-9fab-4039-80ea-274041064585"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3542e813-b559-4903-afef-a2d2049611ca",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--ae42d1c4-9fab-4039-80ea-274041064585",
+      "target_ref": "tool--49a3f463-5fab-4df4-bb1f-4461a3649798"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0acf65e3-c0b3-4f48-a6be-97f33305fda6",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--912f9780-091d-4569-a1c5-fc759506e97c",
+      "target_ref": "file--32f16f64-3521-482b-8d57-e105e586a81a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f3184bef-dd73-4282-a179-be42457fcc4c",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--54e85c61-0fb6-4960-b5b6-c7f0399b9d0c",
+      "target_ref": "tool--cdbdbe61-cd00-4bd8-8be2-6818cf9111ec"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e44345af-e05f-4194-9283-77c59c47daca",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "tool--cdbdbe61-cd00-4bd8-8be2-6818cf9111ec",
+      "target_ref": "attack-action--a76006c4-4c2b-4c4e-b010-ee97b24e6307"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d5b30fc-529a-472e-b4b5-d78b0af5fc3e",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--89818213-456d-4247-8c2c-b703f83b601f",
+      "target_ref": "attack-action--a76006c4-4c2b-4c4e-b010-ee97b24e6307"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab029ed6-ebc9-49ed-a950-ef028eb11159",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--b494d091-6153-4e0d-9623-6d3b3fc20f6a",
+      "target_ref": "file--9578c9a3-d55b-43ca-8027-b6f1ed30d5ca"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8d6406f0-86d7-41b9-b280-e334f808eea3",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--b494d091-6153-4e0d-9623-6d3b3fc20f6a",
+      "target_ref": "file--75533ed4-40c6-4ac9-8aac-9ff120ce2745"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--75a8f26e-b808-47d1-9c8a-825545a147d4",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--e52b0765-7182-4c63-8201-580f8b556f1b",
+      "target_ref": "attack-operator--17e556e1-9785-46b4-917b-69985c03273d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34f72666-23e7-4dc6-b9ed-23d9656d096d",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--fb213efb-57b5-448b-a6da-7063ea8be236",
+      "target_ref": "attack-operator--17e556e1-9785-46b4-917b-69985c03273d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a97d5ad-d866-43af-94f1-0b26b9e1fd6a",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-action--57bc03f7-609b-44af-a33d-90b578d9d20d",
+      "target_ref": "course-of-action--1b59c2b8-bddc-4db1-b87c-36d17d4b3b1b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d3a53470-93e0-4758-b7fd-6f51938646be",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--0dd9fc4d-8da0-4c4e-a4cb-27ee5745e8ff",
+      "target_ref": "attack-action--57bc03f7-609b-44af-a33d-90b578d9d20d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0b9ca2e8-a402-481b-9094-a014f6efda98",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--2b26deb8-b8d1-4388-8aed-f8e847c96302",
+      "target_ref": "attack-action--0296ef72-8754-4771-9e5c-76111882c58b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0282f160-b95d-4474-91ba-659669141aac",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--fc43dbf5-c95a-4a37-a231-e75c2623432b",
+      "target_ref": "attack-operator--e04d6252-0a81-448f-a355-a72484c219d3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e77be0c6-3927-4eb9-9400-cc27e7396dae",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "attack-condition--9b655220-0fe1-4dcd-acf9-e716b0833edc",
+      "target_ref": "attack-operator--e04d6252-0a81-448f-a355-a72484c219d3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d3d1b66-b1ee-4843-b9db-6a7fa51634e9",
+      "spec_version": "2.1",
+      "created": "2025-11-16T11:52:03.656Z",
+      "modified": "2025-11-16T11:52:03.656Z",
+      "relationship_type": "related-to",
+      "source_ref": "location--0c12a0d4-d38a-492b-929f-fbc75c762639",
+      "target_ref": "attack-action--8f833832-b3d3-47f9-8296-e5f0e2913162"
+    }
+  ]
+}
